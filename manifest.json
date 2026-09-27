@@ -1,0 +1,148 @@
+{
+  "manifest_version": "0.3",
+  "name": "actuent",
+  "display_name": "Actuent",
+  "version": "1.1.0",
+  "description": "Search the web as structured data. Get any website's pages and actions as clean JSON instead of raw HTML.",
+  "long_description": "Actuent is a search engine built for AI agents. Claude searches Actuent and gets back LAWP: a structured version of each website with its pages summarised in plain English and the actions a visitor can take, such as booking, ordering or contacting.\n\nFree, no account needed: search any topic or domain (with products and prices), find places nearby with opening hours, plan an outing or a city trip, find a service or dish with its price, events, news, trending sites, and ready checkout links for shops.\n\nWith an optional Actuent Pro API key (from actuent.ai): perform actions on sites that support it (with confirmation first), price-drop and back-in-stock alerts, connected site accounts and search history.\n\nThe extension forwards requests to Actuent's hosted server at agents.actuent.ai. Privacy policy: https://docs.actuent.ai/privacy",
+  "author": {
+    "name": "localilabs",
+    "email": "support@localilabs.com",
+    "url": "https://github.com/localilabs"
+  },
+  "homepage": "https://actuent.ai",
+  "documentation": "https://docs.actuent.ai",
+  "support": "https://github.com/localilabs/actuent-mcpb/issues",
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "ACTUENT_API_KEY": "${user_config.api_key}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "actuent_search",
+      "description": "Search Actuent for any topic, keyword, domain or page, in any language."
+    },
+    {
+      "name": "actuent_history",
+      "description": "Get the search history for this API key — every query made through Actuent."
+    },
+    {
+      "name": "actuent_summarise",
+      "description": "Get a single plain English paragraph summarising any website."
+    },
+    {
+      "name": "actuent_get_actions",
+      "description": "Get all available actions for a specific site."
+    },
+    {
+      "name": "actuent_get_page",
+      "description": "Get the LAWP for a specific URL path."
+    },
+    {
+      "name": "actuent_execute_action",
+      "description": "Perform one of a site's LAWP actions (e.g."
+    },
+    {
+      "name": "actuent_accounts",
+      "description": "The user's site accounts connected to Actuent (for actions like 'reorder my last order')."
+    },
+    {
+      "name": "actuent_action_status",
+      "description": "Check a long-running action that returned pending, using its status_url."
+    },
+    {
+      "name": "actuent_compare",
+      "description": "Compare two or more sites side by side using their LAWP data, or two or more products (URLs from actuent_search products): price, stock, price history and cheaper shops."
+    },
+    {
+      "name": "actuent_trending",
+      "description": "Get the top 10 most searched sites and queries on Actuent right now."
+    },
+    {
+      "name": "actuent_news",
+      "description": "Get the latest news articles on a topic: headlines, sources, links and publish dates."
+    },
+    {
+      "name": "actuent_nearby",
+      "description": "Find physical places near the user relevant to their query, with opening hours and open-now."
+    },
+    {
+      "name": "actuent_plan",
+      "description": "Plan a timed outing near a place: e.g."
+    },
+    {
+      "name": "actuent_cart",
+      "description": "Put products (URLs from actuent_search products) in a basket: returns one link per shop that opens the shop's checkout with the items in it, so the user just reviews and pays."
+    },
+    {
+      "name": "actuent_trip",
+      "description": "Plan a 1–4 day city trip: where to stay, and a timed plan for each day (coffee, sights, lunch, dinner, drinks) with places open when you'd arrive and close together, plus events."
+    },
+    {
+      "name": "actuent_find_service",
+      "description": "Find a specific service or menu item with its price at local businesses, from what they publish on their own websites: e.g."
+    },
+    {
+      "name": "actuent_ask_site",
+      "description": "Answer a question from one website's own pages (e.g."
+    },
+    {
+      "name": "actuent_events",
+      "description": "Upcoming events (concerts, classes, workshops, festivals) that websites publish, by city, date range and topic."
+    },
+    {
+      "name": "actuent_watch_price",
+      "description": "Watch a product (from actuent_search products) and get an email, and optionally a webhook, when its price drops or when it's back in stock."
+    }
+  ],
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "Actuent Pro API key (optional)",
+      "description": "Leave empty to use the free tier. Get a Pro key at actuent.ai.",
+      "sensitive": true,
+      "required": false,
+      "default": ""
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "privacy_policies": [
+    "https://docs.actuent.ai/privacy"
+  ],
+  "keywords": [
+    "agents",
+    "browsing",
+    "lawp",
+    "local",
+    "search",
+    "shopping",
+    "structured data",
+    "travel",
+    "web",
+    "websites"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/localilabs/actuent-mcpb"
+  }
+}
