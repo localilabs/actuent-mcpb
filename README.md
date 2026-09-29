@@ -1,3 +1,5 @@
+<p align="center"><img src="https://api.actuent.ai/assets/lawpy/lawpy-dance.gif" width="108" height="72" alt="Lawpy, the Actuent mascot, dancing"></p>
+
 # Actuent for Claude Desktop
 
 Search the web as structured data. Actuent returns any website as LAWP (Locali AI Web Protocol): clean JSON with the site's pages summarised in plain English and the actions a visitor can take. No raw HTML.
