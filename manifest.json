@@ -2,9 +2,9 @@
   "manifest_version": "0.3",
   "name": "actuent",
   "display_name": "Actuent",
-  "version": "1.1.0",
-  "description": "Search the web as structured data. Get any website's pages and actions as clean JSON instead of raw HTML.",
-  "long_description": "Actuent is a search engine built for AI agents. Claude searches Actuent and gets back LAWP: a structured version of each website with its pages summarised in plain English and the actions a visitor can take, such as booking, ordering or contacting.\n\nFree, no account needed: search any topic or domain (with products and prices), find places nearby with opening hours, plan an outing or a city trip, find a service or dish with its price, events, news, trending sites, and ready checkout links for shops.\n\nWith an optional Actuent Pro API key (from actuent.ai): perform actions on sites that support it (with confirmation first), price-drop and back-in-stock alerts, connected site accounts and search history.\n\nThe extension forwards requests to Actuent's hosted server at agents.actuent.ai. Privacy policy: https://docs.actuent.ai/privacy",
+  "version": "1.2.0",
+  "description": "Give Claude the live internet: what's open now, what's on this weekend, real prices, with links.",
+  "long_description": "Your AI knows a lot, but not what's true right now. Actuent gives Claude the live internet: which places are open, what's on this weekend, what a product costs today and what a company actually offers, each with a link to the source.\n\nTry: \"What's open near me right now?\", \"What concerts are on in New York this weekend?\", \"What's the cheapest Hoka Clifton right now?\" or \"Does Notion have a free plan?\"\n\nFree, no account needed: search websites, products with prices, places nearby with opening hours, events, services and dishes with prices, trip plans, news and trending sites, plus ready checkout links for shops. Under the hood every site is structured as LAWP, an open format for what a site is and what an AI can do there.\n\nWith an optional Actuent Pro API key (from actuent.ai): more results, actions on sites that support them (always confirmed first), price-drop and back-in-stock alerts, connected site accounts and search history.\n\nThe extension forwards requests to Actuent's hosted server at agents.actuent.ai. Privacy policy: https://docs.actuent.ai/privacy",
   "author": {
     "name": "localilabs",
     "email": "support@localilabs.com",

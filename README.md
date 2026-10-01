@@ -2,7 +2,7 @@
 
 # Actuent for Claude Desktop
 
-Search the web as structured data. Actuent returns any website as LAWP (Locali AI Web Protocol): clean JSON with the site's pages summarised in plain English and the actions a visitor can take. No raw HTML.
+Give Claude the live internet. Ask what's open near you right now, what's on in New York this weekend or what something costs today, and Claude actually knows, with links to the source. Under the hood, every site is structured as LAWP, an open format for what a site is and what an AI can do there.
 
 ## Install
 
